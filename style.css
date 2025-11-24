@@ -1,0 +1,131 @@
+/* GENERAL */
+body {
+    font-family: Poppins, sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+/* LIGHT MODE */
+body.light {
+    background: linear-gradient(135deg, #dcdee1, #dcd6ff);
+    color: #000;
+}
+
+/* DARK MODE */
+body.dark {
+    background: linear-gradient(135deg, #1a1a1a, #2e2e2e);
+    color: #fff;
+}
+
+/* MODE BUTTON */
+.mode-btn {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    padding: 8px 18px;
+    border-radius: 25px;
+    background: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+body.dark .mode-btn {
+    background: white;
+    color: black;
+}
+
+/* WEATHER CARD */
+.weather-card {
+    width: 430px;
+    padding: 25px;
+    border-radius: 22px;
+    background: linear-gradient(145deg, #ffb5d8, #ffe9f4);
+    box-shadow: 0px 15px 30px rgba(0,0,0,0.15);
+    animation: fadeIn 0.4s ease, slideUp 0.4s ease;
+    transition: 0.5s;
+}
+
+/* DARK MODE CARD */
+body.dark .weather-card {
+    background: linear-gradient(145deg, #333, #000);
+    box-shadow: 0px 15px 25px rgba(255,255,255,0.08);
+}
+
+/* ICON */
+.icon-box {
+    width: 85px;
+    height: 85px;
+    background: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: -65px;
+    animation: pop 0.5s ease-in-out;
+}
+
+body.dark .icon-box {
+    background: #2a2a2a;
+}
+
+.icon-box img {
+    width: 65px;
+}
+
+/* LOCATION & CONDITION */
+.details {
+    margin-left: 110px;
+}
+
+#temperature {
+    font-size: 55px;
+    margin-top: 25px;
+    font-weight: 700;
+}
+
+/* EXTRA INFO */
+.extras {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* REFRESH BUTTON */
+.refresh {
+    margin-top: 25px;
+    padding: 12px 22px;
+    font-size: 16px;
+    border: none;
+    border-radius: 15px;
+    font-weight: bold;
+    background: #008cff;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.refresh:hover {
+    transform: scale(1.08);
+}
+
+/* ANIMATIONS */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { transform: translateY(25px); }
+    to { transform: translateY(0); }
+}
+
+@keyframes pop {
+    0% { transform: scale(0.8); }
+    100% { transform: scale(1); }
+}

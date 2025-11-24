@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Info Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+
+    <button id="modeToggle" class="mode-btn">🌙 Dark Mode</button>
+
+    <div class="weather-card" id="card">
+
+        <div class="icon-box">
+            <img id="weatherIcon" src="" alt="weather-icon">
+        </div>
+
+        <div class="details">
+            <h2 id="location">City</h2>
+            <p id="condition">Condition</p>
+        </div>
+
+        <h1 id="temperature">0°C</h1>
+
+        <div class="extras">
+            <p id="humidity">Humidity: --%</p>
+            <p id="wind">Wind: -- km/h</p>
+        </div>
+
+        <button id="refreshBtn" class="refresh">Refresh</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
